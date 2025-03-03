@@ -18,7 +18,12 @@ try {
     console.log("All Contacts After editing", addressBook.getAllContacts());
     console.log(addressBook.deleteContact("Rakesh"));
     console.log("All Contacts After Deleting:", addressBook.getAllContacts());
-    console.log("Total Contacts:", addressBook.countContacts());
+    console.log("Total Contacts:", addressBook.countContacts()); 
+
+    const duplicateContact = new Contact(
+        "Anand", "Soni", "Bhopal", "India", "In", "100001", "9876543210", "anandsoni9165@gmail.com"
+    );
+    console.log(addressBook.addContact(duplicateContact)); 
 } catch (error) {
     console.error("Error:", error.message);
 }
