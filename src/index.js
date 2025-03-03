@@ -7,8 +7,13 @@ try {
     const contact1 = new Contact(
         "Deepak", "Choursiya", "Bhopal", "India", "In", "100001", "9876543210", "chourasiadeepak2002@gmail.com"
     );
-    console.log(addressBook.addContact(contact1));
-    console.log(addressBook.getAllContacts());
+    console.log(addressBook.addContact(contact1)); 
+
+    const contact2 = new Contact(
+        "Rakesh", "Soni", "Bhopal", "India","In","1000000","9197979988","rakeshsoni395@gmail.com"
+    )
+    console.log(addressBook.addContact(contact2)); 
+    console.log("All Contacts", addressBook.getAllContacts());
 } catch (error) {
     console.error("Error:", error.message);
 }
