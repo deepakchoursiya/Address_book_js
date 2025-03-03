@@ -5,7 +5,7 @@ const addressBook = new AddressBook();
 
 try {
     const contact1 = new Contact(
-        "Deepak", "Chourasia", "Bhopal", "India", "In", "100001", "9876543210", "chourasiadeepak2002@gmail.com"
+        "Deepak", "Choursiya", "Bhopal", "India", "In", "100001", "9876543210", "chourasiadeepak2002@gmail.com"
     );
     console.log(addressBook.addContact(contact1)); 
 
@@ -31,6 +31,8 @@ try {
     console.log("Viewing Persons by City or State:");
     console.log(addressBook.viewPersonsByCityOrState());
 
+    console.log("Count of Contacts by City and State:");
+    console.log(addressBook.countByCityOrState());
 } catch (error) {
     console.error("Error:", error.message);
 }
