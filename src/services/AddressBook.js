@@ -59,6 +59,20 @@ class AddressBook {
             c.city.toLowerCase() === location.toLowerCase() || 
             c.state.toLowerCase() === location.toLowerCase()
         );
+    } 
+
+    viewPersonsByCityOrState() {
+        return this.contacts.reduce((result, contact) => {
+            if (!result[contact.city]) {
+                result[contact.city] = [];
+            }
+            if (!result[contact.state]) {
+                result[contact.state] = [];
+            }
+            result[contact.city].push(contact.firstName + " " + contact.lastName);
+            result[contact.state].push(contact.firstName + " " + contact.lastName);
+            return result;
+        }, {});
     }
 }
 
